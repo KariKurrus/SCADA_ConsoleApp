@@ -11,7 +11,7 @@
         {
             Value = RandomGenerator.NextDouble() * 100;
 
-            Console.WriteLine($"{Name}: Flow - {Value:F2} м³/год;");
+            Console.WriteLine($"{Name}: Flow - {Value:F2} m3/h;");
         }
     }
 }
