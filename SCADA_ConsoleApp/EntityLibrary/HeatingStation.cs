@@ -1,7 +1,5 @@
 ﻿using SCADA_ConsoleApp.EntityLibrary.SensorLibrary;
 using SCADA_ConsoleApp.EntityLibrary.System;
-using SCADA_ConsoleApp.Interfaces;
-using System.Security.Cryptography.X509Certificates;
 
 namespace SCADA_ConsoleApp.EntityLibrary
 {
@@ -51,11 +49,11 @@ namespace SCADA_ConsoleApp.EntityLibrary
                         PumpSystem.Stop();
                         break;
 
-                    case FlowSensor pressureSensor when pressureSensor.Value < 2:
+                    case FlowSensor pressureSensor when pressureSensor.Value < 20:
                         FlowControlSystem.Start();
                         break;
 
-                    case FlowSensor pressureSensor when pressureSensor.Value > 5:
+                    case FlowSensor pressureSensor when pressureSensor.Value > 80:
                         FlowControlSystem.Stop();
                         break;
                 }
